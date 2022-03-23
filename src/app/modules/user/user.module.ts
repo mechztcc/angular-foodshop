@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { UserRoutingModule } from './user-routing.module';
-import { CreateAccountComponent } from './pages/create-account/create-account.component';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateAccountFormComponent } from './components/create-account-form/create-account-form.component';
+import { CreateAccountComponent } from './pages/create-account/create-account.component';
+import { UserRoutingModule } from './user-routing.module';
+
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { CreateAccountFormComponent } from './components/create-account-form/cre
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class UserModule { }

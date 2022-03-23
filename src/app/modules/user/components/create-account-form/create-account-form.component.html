@@ -1,49 +1,54 @@
 <div class="row my-3">
     <div class="col-md-4 offset-md-4">
         <div class="card">
-            <div class="card-header">
-                <h1>Bem-vindo ao, <b>Sistema de entregas</b></h1>
+            <div class="card-header text-center">
+                <h1>Bem-vindo</h1>
                 <span>Crie sua conta gratuitamente</span>
             </div>
             <div class="card-body">
-                <form>
+                <form [formGroup]="form" (ngSubmit)="validateForm()">
                     <div class="col-md-12">
                         <div class="form-group">
                             <div class="input-group my-1">
-                                <input type="text" class="form-control" placeholder="Nome da empresa">
+                                <input type="text" class="form-control" placeholder="Nome da empresa" formControlName="company">
                                 <span class="input-group-text">
-                                    <i class="fa-solid fa-hotel"></i>
+                                    <i class="fa-solid fa-hotel text-primary"></i>
                                 </span>
                             </div>
+                            <span *ngIf="errorCompany" class="badge bg-gradient-warning text-white">Campo inválido</span>
+                        </div>
+                        <div class="form-group">
                             <div class="input-group my-1">
-                                <input type="text" class="form-control" placeholder="E-mail">
+                                <input type="text" class="form-control" placeholder="E-mail" formControlName="email">
                                 <span class="input-group-text">
-                                    <i class="fa-solid fa-at"></i>
+                                    <i class="fa-solid fa-at text-primary"></i>
                                 </span>
                             </div>
+                            <span *ngIf="errorEmail" class="badge bg-gradient-warning text-white">Campo inválido</span>
+                        </div>
+                        <div class="form-group">
                             <div class="input-group my-1">
-                                <input type="text" class="form-control" placeholder="Senha">
+                                <input type="text" class="form-control" placeholder="Senha" formControlName="password">
                                 <span class="input-group-text">
-                                    <i class="fa-solid fa-lock-open"></i>
+                                    <i class="fa-solid fa-lock-open text-primary"></i>
                                 </span>
                             </div>
+                            <span *ngIf="errorPassword" class="badge bg-gradient-warning text-white">Campo inválido</span>
+                        </div>
+                        <div class="form-group">
                             <div class="input-group my-1">
-                                <input type="text" class="form-control" placeholder="Confirmar senha">
+                                <input type="text" class="form-control" placeholder="Confirmar senha" formControlName="confirmPass">
                                 <span class="input-group-text">
-                                    <i class="fa-solid fa-lock-open"></i>
+                                    <i class="fa-solid fa-lock-open text-primary"></i>
                                 </span>
                             </div>
+                            <span *ngIf="errorConfirmPass" class="badge bg-gradient-warning text-white">Campo inválido</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <button class="btn btn-sm btn-primary px-3 py-2">Criar conta gratuita</button>
-                        </div>
-                        <div class="col-md-12 text-center my-3">
-                            <span>Ou</span>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <a href="#">Entrar</a>
+                            <button class="btn btn-sm btn-primary w-100" type="submit" *ngIf="!loading">Criar conta gratuita</button>
+                            <button class="btn btn-sm btn-primary w-100" type="submit" *ngIf="loading">Criando <i class="fa-solid fa-spinner"></i></button>
                         </div>
                     </div>
                 </form>
