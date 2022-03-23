@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { User } from '../../shared/types/user.interface';
 import { UserService } from '../../shared/user.service';
@@ -22,7 +23,7 @@ export class CreateAccountFormComponent implements OnInit {
 
   user: User;
 
-  constructor(private fb: FormBuilder, private userService: UserService, private toastrService: ToastrService) { }
+  constructor(private fb: FormBuilder, private userService: UserService, private toastrService: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -74,6 +75,10 @@ export class CreateAccountFormComponent implements OnInit {
       }).add(() => {
         this.loading = false;
       });
+  }
+
+  navigate() {
+    this.router.navigate(['user/login'])
   }
 
 }

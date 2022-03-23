@@ -4,13 +4,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateAccountFormComponent } from './components/create-account-form/create-account-form.component';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
 import { UserRoutingModule } from './user-routing.module';
+import { LoginComponent } from './pages/login/login.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 
 
 @NgModule({
   declarations: [
     CreateAccountComponent,
-    CreateAccountFormComponent
+    CreateAccountFormComponent,
+    LoginComponent,
+    LoginFormComponent
   ],
   imports: [
     CommonModule,

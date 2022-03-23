@@ -11,7 +11,7 @@
                         <div class="form-group">
                             <div class="input-group my-1">
                                 <input type="text" class="form-control" placeholder="Nome da empresa" formControlName="company">
-                                <span class="input-group-text">
+                                <span class="input-group-text pointer">
                                     <i class="fa-solid fa-hotel text-primary"></i>
                                 </span>
                             </div>
@@ -20,7 +20,7 @@
                         <div class="form-group">
                             <div class="input-group my-1">
                                 <input type="text" class="form-control" placeholder="E-mail" formControlName="email">
-                                <span class="input-group-text">
+                                <span class="input-group-text pointer">
                                     <i class="fa-solid fa-at text-primary"></i>
                                 </span>
                             </div>
@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <div class="input-group my-1">
                                 <input type="text" class="form-control" placeholder="Senha" formControlName="password">
-                                <span class="input-group-text">
+                                <span class="input-group-text pointer">
                                     <i class="fa-solid fa-lock-open text-primary"></i>
                                 </span>
                             </div>
@@ -38,20 +38,26 @@
                         <div class="form-group">
                             <div class="input-group my-1">
                                 <input type="text" class="form-control" placeholder="Confirmar senha" formControlName="confirmPass">
-                                <span class="input-group-text">
+                                <span class="input-group-text pointer">
                                     <i class="fa-solid fa-lock-open text-primary"></i>
                                 </span>
                             </div>
                             <span *ngIf="errorConfirmPass" class="badge bg-gradient-warning text-white">Campo inválido</span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <button class="btn btn-sm btn-primary w-100" type="submit" *ngIf="!loading">Criar conta gratuita</button>
-                            <button class="btn btn-sm btn-primary w-100" type="submit" *ngIf="loading">Criando <i class="fa-solid fa-spinner"></i></button>
-                        </div>
+                    <div class="col-md-12 text-center">
+                        <button class="btn bg-gradient-primary text-white w-100" type="submit" *ngIf="!loading">Criar conta gratuita</button>
+                        <button class="btn bg-gradient-primary text-white w-100" type="submit" *ngIf="loading">Criando <i class="fa-solid fa-spinner"></i></button>
+                    </div>
+                    <div class="col-md-12 text-center my-2">
+                        <button class="btn bg-gradient-warning text-white w-100" type="button" (click)="navigate()">Já sou cadastrado</button>
                     </div>
                 </form>
+            </div>
+            <div class="card-footer text-center">
+                <i class="fa-brands fa-dev mr-2"></i>
+                <small>Em desenvolvimento</small>
+                <i class="fa-brands fa-dev ml-2"></i>
             </div>
         </div>
     </div>
