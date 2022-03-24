@@ -3,9 +3,10 @@
         <div class="card">
             <div class="card-header text-center">
                 <h1>Bem-vindo</h1>
+                <span>É bom te ver novamente!</span>
             </div>
             <div class="card-body">
-                <form>
+                <form [formGroup]="form" (ngSubmit)="validateForm()">
                     <div class="col-md-12">
                         <div class="form-group">
                             <div class="input-group my-1">
@@ -17,24 +18,23 @@
                         </div>
                         <div class="form-group">
                             <div class="input-group my-1">
-                                <input type="text" class="form-control" placeholder="Senha">
-                                <span class="input-group-text pointer">
-                                    <i class="fa-solid fa-lock text-primary"></i>
-                                    <!-- <i class="fa-solid fa-lock-open"></i> -->
+                                <input type="text" class="form-control" placeholder="Senha" *ngIf="isVisible" formControlName="password">
+                                <input type="password" class="form-control" placeholder="Senha" *ngIf="!isVisible" formControlName="password">
+                                <span class="input-group-text pointer" (click)="changeVisibility()">
+                                    <i class="fa-solid fa-lock text-primary pointer" *ngIf="!isVisible"></i>
+                                    <i class="fa-solid fa-lock-open text-warning pointer" *ngIf="isVisible"></i>
                                 </span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
-                        <button class="btn bg-gradient-primary text-white w-100">Entrar</button>
-                        <button class="btn bg-gradient-warning text-white w-100 my-3" (click)="navigate()">Criar conta</button>
+                        <button class="btn bg-gradient-primary text-white w-100" type="submit">Entrar</button>
+                        <button class="btn bg-gradient-warning text-white w-100 my-3" type="button" (click)="navigate()">Criar conta</button>
                     </div>
                 </form>
             </div>
             <div class="card-footer text-center">
-                <i class="fa-brands fa-dev mr-2"></i>
-                <small>Em desenvolvimento</small>
-                <i class="fa-brands fa-dev ml-2"></i>
+                <a href="#">Esqueceu a senha?</a>
             </div>
         </div>
     </div>
