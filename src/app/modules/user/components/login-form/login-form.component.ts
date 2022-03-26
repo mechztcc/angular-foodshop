@@ -61,9 +61,14 @@ export class LoginFormComponent implements OnInit {
     this.userService.login(this.user)
       .subscribe((data: User) => {
         this.toastrService.success('Logado com sucesso.', 'Sucesso!');
+        this.saveOnLocalStorage(data);
       }).add(() => {
         this.isLoading = false;
       });
+  }
+
+  saveOnLocalStorage(data: User) {
+    localStorage.setItem('token', data.token);
   }
 
   navigate() {
