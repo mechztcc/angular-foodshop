@@ -10,11 +10,12 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <div class="input-group my-1">
-                                <input type="text" class="form-control" placeholder="E-mail">
+                                <input type="text" class="form-control" placeholder="E-mail" formControlName="email">
                                 <span class="input-group-text pointer">
                                     <i class="fa-solid fa-hotel text-primary"></i>
                                 </span>
                             </div>
+                            <span *ngIf="errorEmail" class="badge bg-gradient-warning text-white">Campo inválido</span>
                         </div>
                         <div class="form-group">
                             <div class="input-group my-1">
@@ -25,10 +26,12 @@
                                     <i class="fa-solid fa-lock-open text-warning pointer" *ngIf="isVisible"></i>
                                 </span>
                             </div>
+                            <span *ngIf="errorPassword" class="badge bg-gradient-warning text-white">Campo inválido</span>
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
-                        <button class="btn bg-gradient-primary text-white w-100" type="submit">Entrar</button>
+                        <button class="btn bg-gradient-primary text-white w-100" type="submit" *ngIf="!isLoading">Entrar</button>
+                        <button class="btn bg-gradient-primary text-white w-100" type="button" *ngIf="isLoading" disabled>Entrando <i class="fa-solid fa-spinner"></i></button>
                         <button class="btn bg-gradient-warning text-white w-100 my-3" type="button" (click)="navigate()">Criar conta</button>
                     </div>
                 </form>

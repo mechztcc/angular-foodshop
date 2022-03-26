@@ -71,7 +71,7 @@ export class CreateAccountFormComponent implements OnInit {
     this.userService.createAccount(this.user)
       .subscribe((data: User) => {
         console.log(data);
-        this.toastrService.success('Logado com sucesso.', 'Sucesso!');
+        this.toastrService.success('Conta criada com sucesso.', 'Sucesso!');
       }).add(() => {
         this.loading = false;
       });
