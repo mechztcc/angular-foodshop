@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   chartOption: EChartsOption = {
     xAxis: {
       type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      data: ['Seg', 'Ter', 'Quar', 'Qui', 'Sex', 'Sab', 'Dom'],
     },
     yAxis: {
       type: 'value',

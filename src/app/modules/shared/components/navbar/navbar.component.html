@@ -1,28 +1,33 @@
-<nav class="navbar navbar-expand-lg top-0 z-index-3 w-100 shadow-none  bg-gradient-primary d-flex justify-content-between ">
+<nav
+  class="navbar navbar-expand-lg top-0 z-index-3 w-100 shadow-none  bg-gradient-primary d-flex justify-content-between" style="height: 100px;">
   <div class="col-md-4 text-white">
-    <span>LOGO</span>
+    <span>
+      <i class="fa-brands fa-rebel" style="font-size: 50px;"></i>
+    </span>
   </div>
-  <i class="fa-solid fa-bars text-white" style="font-size: 30px;" (click)="handleNav()"></i>
+  <div class="col-md-4 text-right">
+    <i class="fa-solid fa-bell text-white" style="font-size: 30px;"></i>
+    <i class="fa-solid fa-bars text-white mx-5" style="font-size: 30px;" (click)="handleNav()"></i>
+  </div>
 </nav>
 
 <div class="row fadeIn" *ngIf="showNav">
-	<div class="col-md-12">
-		<div class="card">
-			<div class="card-body d-flex">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body d-flex">
         <div class="col-md-2">
-          <h2><i class="fa-solid fa-chart-column mr-2"></i>Dashboard</h2>
+          <h2 class="pointer"><i class="fa-solid fa-chart-column mr-2"></i>Dashboard</h2>
         </div>
         <div class="col-md-2">
-          <h2><i class="fa-solid fa-user mr-2"></i>Clientes</h2>
+          <h2 class="pointer"><i class="fa-solid fa-user mr-2"></i>Clientes</h2>
         </div>
         <div class="col-md-2">
           <h2><i class="fa-solid fa-truck-ramp-box mr-2"></i>Entregadores</h2>
         </div>
         <div class="col-md-2">
-          <h2><i class="fa-solid fa-gear mr-2"></i>Configurações</h2>
+          <h2 class="pointer"><i class="fa-solid fa-gear mr-2"></i>Configurações</h2>
         </div>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
-
