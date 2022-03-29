@@ -6,6 +6,7 @@ import { SharedModule } from './modules/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
