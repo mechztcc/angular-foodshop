@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { CardHomeComponent } from './components/card-home/card-home.component';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    CardHomeComponent
   ],
   imports: [
     CommonModule,
