@@ -8,20 +8,20 @@
                         <thead>
                             <tr>
                                 <th class="text-center">#</th>
-                                <th>Name</th>
-                                <th>Job Position</th>
-                                <th>Since</th>
-                                <th class="text-right">Salary</th>
-                                <th class="text-right">Actions</th>
+                                <th>Nome</th>
+                                <th>Zip</th>
+                                <th>Cidade</th>
+                                <th class="text-right">Status</th>
+                                <th class="text-right">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="text-center">2</td>
-                                <td>John Doe</td>
-                                <td>Design</td>
-                                <td>2012</td>
-                                <td class="text-right">&euro; 89,241</td>
+                                <td>Loja 01</td>
+                                <td>53900-000</td>
+                                <td>Recife</td>
+                                <td class="text-right">Ativo</td>
                                 <td class="td-actions text-right">
                                   <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
                                     <i class="fa-solid fa-arrow-up"></i>
@@ -42,8 +42,47 @@
     </div>
     <div class="col-md-4">
         <div class="card my-4 text-center">
+            <div class="card-header">
+                <h2>Cadastrar loja</h2>
+            </div>
             <div class="card-body">
-                <h2>Cadastrar </h2>
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Nome ">
+                              </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="CEP"/>
+                              </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Number"/>
+                              </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Estado"/>
+                              </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Rua"/>
+                              </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cidade"/>
+                              </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="w-100 btn btn-sm bg-gradient-warning text-white">Salvar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
