@@ -17,4 +17,8 @@ export class FoodstoreService {
     return this.http.get<Foodstore[]>(`${route}/list-all-by-user`);
   }
 
+  create(foodstore: Foodstore): Observable<Foodstore> {
+    return this.http.post<Foodstore>(`${route}/create`, foodstore);
+  }
+
 }

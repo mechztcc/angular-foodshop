@@ -1,0 +1,45 @@
+<div class="card my-4 text-center">
+    <div class="card-header">
+        <h2>Cadastrar loja</h2>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="validateForm()">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName="name" placeholder="Nome">
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="zip_code" placeholder="CEP"/>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="number" placeholder="Number"/>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="state" placeholder="Estado"/>
+                      </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="street" placeholder="Rua"/>
+                      </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="city" placeholder="Cidade"/>
+                      </div>
+                </div>
+                <div class="col-md-12">
+                    <button class="w-100 btn btn-sm bg-gradient-warning text-white" *ngIf="!isLoading">Salvar</button>
+                    <button class="w-100 btn btn-sm bg-gradient-warning text-white" *ngIf="isLoading">Salvando</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
