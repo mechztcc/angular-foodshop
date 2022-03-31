@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FoodstoreService } from '../../shared/services/foodstore.service';
+import { Foodstore } from '../../shared/types/foodstore.interface';
 
 @Component({
   selector: 'app-foodstore',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodstoreComponent implements OnInit {
 
-  constructor() { }
+  isLoading: boolean = false;
+  foodstores: Foodstore[] = [];
+
+  constructor(private foodstoreService: FoodstoreService) { }
 
   ngOnInit(): void {
+    this.listAllByUser();
+  }
+
+  listAllByUser() {
+    this.isLoading = true;
+    this.foodstoreService.findAllByUser()
+      .subscribe((data: Foodstore[]) => {
+        this.foodstores = data;
+      }).add(() => {
+        this.isLoading = false;
+      });
   }
 
 }

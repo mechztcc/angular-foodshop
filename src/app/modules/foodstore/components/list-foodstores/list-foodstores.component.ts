@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Foodstore } from '../../shared/types/foodstore.interface';
 
 @Component({
   selector: 'app-list-foodstores',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListFoodstoresComponent implements OnInit {
 
+  @Input() foodstores: Foodstore[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.foodstores);
   }
 
 }
