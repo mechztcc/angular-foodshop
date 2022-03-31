@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SidenavComponent implements OnInit {
 
   isOpened: boolean = false;
+  menuItems: any[] = [
+    {title: 'titulo', path: 'caminho', icon: 'icone'}
+  ];
+
+  isCollapsed: boolean = false;
 
   constructor() { }
 

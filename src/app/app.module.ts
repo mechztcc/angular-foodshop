@@ -8,6 +8,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { RequestHandlerInterceptor } from './modules/shared/core/interceptor/request-handler.interceptor';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RequestHandlerInterceptor } from './modules/shared/core/interceptor/req
     ToastrModule.forRoot(),
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
-    })
+    }),
+    NgbModule
   ],
   providers: [
     {
