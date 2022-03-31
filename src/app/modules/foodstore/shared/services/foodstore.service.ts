@@ -21,4 +21,8 @@ export class FoodstoreService {
     return this.http.post<Foodstore>(`${route}/create`, foodstore);
   }
 
+  delete(id: number | string): Observable<number> {
+    return this.http.delete<number>(`${route}/delete/${id}`);
+  }
+
 }
