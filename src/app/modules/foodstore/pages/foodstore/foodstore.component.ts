@@ -23,6 +23,8 @@ export class FoodstoreComponent implements OnInit {
     this.foodstoreService.findAllByUser()
       .subscribe((data: Foodstore[]) => {
         this.foodstores = data;
+        console.log(data);
+
       }).add(() => {
         this.isLoading = false;
       });
