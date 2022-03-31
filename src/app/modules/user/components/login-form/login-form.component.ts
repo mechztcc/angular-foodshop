@@ -62,6 +62,7 @@ export class LoginFormComponent implements OnInit {
       .subscribe((data: User) => {
         this.toastrService.success('Logado com sucesso.', 'Sucesso!');
         this.saveOnLocalStorage(data);
+        this.router.navigate(['/dashboard']);
       }).add(() => {
         this.isLoading = false;
       });
