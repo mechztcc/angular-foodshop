@@ -6,13 +6,15 @@ import { FoodstoreComponent } from './pages/foodstore/foodstore.component';
 import { ListFoodstoresComponent } from './components/list-foodstores/list-foodstores.component';
 import { CardCreateFoodstoreComponent } from './components/card-create-foodstore/card-create-foodstore.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FoodstoreDetailPageComponent } from './pages/foodstore-detail-page/foodstore-detail-page.component';
 
 
 @NgModule({
   declarations: [
     FoodstoreComponent,
     ListFoodstoresComponent,
-    CardCreateFoodstoreComponent
+    CardCreateFoodstoreComponent,
+    FoodstoreDetailPageComponent
   ],
   imports: [
     CommonModule,

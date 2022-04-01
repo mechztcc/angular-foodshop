@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FoodstoreService } from '../../shared/services/foodstore.service';
 import { Foodstore } from '../../shared/types/foodstore.interface';
@@ -14,11 +15,16 @@ export class ListFoodstoresComponent implements OnInit {
 
   constructor(
     private foodstoreService: FoodstoreService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     console.log(this.foodstores);
+  }
+
+  navigate(id: string) {
+    this.router.navigate([`foodstores/details/${id}`]);
   }
 
   delete(id: string | number) {

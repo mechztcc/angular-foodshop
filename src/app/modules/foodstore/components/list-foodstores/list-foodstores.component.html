@@ -27,7 +27,7 @@
                                     <span *ngIf="!foodstore.actived" class="badge bg-gradient-warning text-white">Inativo</span>
 
                                     <td class="td-actions text-right">
-                                      <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm ">
+                                      <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " (click)="navigate(foodstore.id)">
                                         <i class="fa-solid fa-store"></i>
                                       </button>
                                       <button type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm" data-toggle="modal" data-target="#exampleModal">
