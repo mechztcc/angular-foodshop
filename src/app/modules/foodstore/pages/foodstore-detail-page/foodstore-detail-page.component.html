@@ -1,1 +1,79 @@
-<p>foodstore-detail-page works!</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card my-4">
+            <div class="card-header">
+                <div class="col-md-12">
+                    <h2>{{ foodstore?.name }}</h2>
+                </div>
+                <div class="col-md-4">
+                    <span class="badge bg-gradient-primary text-white w-100" *ngIf="foodstore?.actived">Ativo</span>
+                    <span class="badge bg-gradient-warning text-white w-100" *ngIf="!foodstore?.actived">Inativo</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="col-md-12">
+                    <span><b>Cidade: </b></span>
+                    <span>{{ foodstore?.address.city }}</span>
+                </div>
+                <div class="col-md-12">
+                    <span><b>Estado: </b></span>
+                    <span>{{ foodstore?.address.state }}</span>
+                </div>
+                <div class="col-md-12">
+                    <span><b>Rua: </b></span>
+                    <span>{{ foodstore?.address.street }}</span>
+                </div>
+                <div class="col-md-12">
+                    <span><b>Número: </b></span>
+                    <span>{{ foodstore?.address.number }}</span>
+                </div>
+                <div class="col-md-12">
+                    <span><b>Criada em: </b></span>
+                    <span>{{ foodstore?.created_at | date: 'd/MM/yyyy' }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card my-4">
+            <div class="card-header">
+                <h2>Histórico de vendas</h2>
+            </div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h2>Cardápios</h2>
+            </div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mt-4">
+            <div class="card-header">
+                <h2>Funcionários</h2>
+            </div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mt-4">
+            <div class="card-header">
+                <h2>Produtos</h2>
+            </div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+</div>
