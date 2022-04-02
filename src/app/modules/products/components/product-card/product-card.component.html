@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mt-4">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Produtos <i class="fa-solid fa-hotdog ml-2 text-primary"></i></h2>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <button class="btn btn-sm btn-primary">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th>Nome</th>
+                                                <th>Price</th>
+                                                <th>Tamanho</th>
+                                                <th class="text-right">Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <ng-container *ngFor="let prod of products">
+                                                <tr>
+                                                    <td>{{ prod.id }}</td>
+                                                    <td>{{ prod.name }}</td>
+                                                    <td>{{ prod.price }}</td>
+                                                    <td>{{ prod.size}}</td>
+
+                                                    <td class="td-actions text-right">
+                                                        <button type="button" rel="tooltip"
+                                                            class="btn btn-info btn-icon btn-sm ">
+                                                            <i class="fa-solid fa-pen"></i>
+                                                        </button>
+                                                        <button type="button" rel="tooltip"
+                                                            class="btn btn-danger btn-icon btn-sm ">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </ng-container>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

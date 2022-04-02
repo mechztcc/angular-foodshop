@@ -11,6 +11,7 @@ import { RequestHandlerInterceptor } from './modules/shared/core/interceptor/req
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryModule } from './modules/category/category.module';
 import { FoodstoreModule } from './modules/foodstore/foodstore.module';
+import { ProductsModule } from './modules/products/products.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FoodstoreModule } from './modules/foodstore/foodstore.module';
   imports: [
     FoodstoreModule,
     CategoryModule,
+    ProductsModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

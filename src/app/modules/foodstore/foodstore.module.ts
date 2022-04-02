@@ -8,6 +8,7 @@ import { CardCreateFoodstoreComponent } from './components/card-create-foodstore
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FoodstoreDetailPageComponent } from './pages/foodstore-detail-page/foodstore-detail-page.component';
 import { CategoryModule } from '../category/category.module';
+import { ProductsModule } from '../products/products.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CategoryModule } from '../category/category.module';
     FoodstoreRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    CategoryModule
+    CategoryModule,
+    ProductsModule
   ]
 })
 export class FoodstoreModule { }
