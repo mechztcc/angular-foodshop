@@ -22,4 +22,8 @@ export class ProductService {
     return this.http.get<Product[]>(`${route2}/find-products/foodstore/${id}`);
   }
 
+  delete(id: number | string): Observable<Product> {
+    return this.http.delete<Product>(`${route}/delete/${id}`);
+  }
+
 }
