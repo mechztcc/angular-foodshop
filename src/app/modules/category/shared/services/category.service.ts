@@ -17,4 +17,8 @@ export class CategoryService {
     return this.http.get<Category[]>(`${route}/findByFoodstore/${id}`);
   }
 
+  create(category: Category): Observable<Category> {
+    return this.http.post<Category>(`${route}/create`, category);
+  }
+
 }

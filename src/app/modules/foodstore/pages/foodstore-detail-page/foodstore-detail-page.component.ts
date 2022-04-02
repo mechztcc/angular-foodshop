@@ -31,4 +31,9 @@ export class FoodstoreDetailPageComponent implements OnInit {
       });
   }
 
+
+  refresh() {
+    window.location.reload();
+  }
+
 }

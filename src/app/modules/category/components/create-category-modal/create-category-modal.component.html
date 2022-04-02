@@ -1,0 +1,30 @@
+
+  <!-- Modal -->
+  <div class="modal fade" id="createCategoryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cadastrar nova categoria</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="validateForm()">
+        <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Nome da categoria</label>
+                            <input type="text" class="form-control my-2" placeholder="nome" formControlName="name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-sm btn-primary" *ngIf="!isLoading">Salvar</button>
+                <button type="button" class="btn btn-sm btn-primary" *ngIf="isLoading" disabled>Salvando</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
