@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { RequestHandlerInterceptor } from './modules/shared/core/interceptor/request-handler.interceptor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CategoryModule } from './modules/category/category.module';
+import { FoodstoreModule } from './modules/foodstore/foodstore.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    FoodstoreModule,
+    CategoryModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

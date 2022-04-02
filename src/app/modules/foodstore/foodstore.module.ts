@@ -7,6 +7,7 @@ import { ListFoodstoresComponent } from './components/list-foodstores/list-foods
 import { CardCreateFoodstoreComponent } from './components/card-create-foodstore/card-create-foodstore.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FoodstoreDetailPageComponent } from './pages/foodstore-detail-page/foodstore-detail-page.component';
+import { CategoryModule } from '../category/category.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FoodstoreDetailPageComponent } from './pages/foodstore-detail-page/food
     FoodstoreRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    CategoryModule
   ]
 })
 export class FoodstoreModule { }
