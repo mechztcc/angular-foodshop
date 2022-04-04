@@ -11,6 +11,9 @@ export class AppComponent {
   token: string = '';
 
   constructor() {
+  }
+  
+  ngOnInit(): void {
     this.token = localStorage.getItem('token');    
   }
 }
